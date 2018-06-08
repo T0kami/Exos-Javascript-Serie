@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      <input type="text" name="user_age" value="" placeholder="Age">
+
+      <input type="submit" name="submit" value="Valider">
+    </form>
+
+    <script type="text/javascript">
+
+      document.getElementsByName('submit')[0].addEventListener("click", (event) =>{
+        event.preventDefault();
+        var user_age = document.getElementsByName("user_age")[0].value;
+        alert("Vous avez vécu : " + user_age*365 + " jours");
+      });
+    </script>
+  </body>
+</html>

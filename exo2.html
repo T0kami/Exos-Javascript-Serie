@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="couleur" value="" placeholder="couleur">
+
+      <input type="submit" name="submit" value="Valider">
+    </form>
+
+    <script type="text/javascript">
+
+      document.getElementsByName('submit')[0].addEventListener("click", (event) =>{
+        event.preventDefault();
+        var couleur = document.getElementsByName("couleur")[0].value;
+
+
+        document.body.style.backgroundColor = couleur;
+      });
+    </script>
+  </body>
+</html>

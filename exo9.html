@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      <input type="text" name="course" value="" placeholder="Course à ajouter...">
+
+      <input type="submit" name="submit" value="Valider">
+    </form>
+    <ul id='liste'>
+
+    </ul>
+
+    <script type="text/javascript">
+      document.getElementsByName('submit')[0].addEventListener("click", (event) =>{
+        event.preventDefault();
+        var liste = document.getElementById("liste");
+        var course = document.getElementsByName("course")[0];
+        if(course.value == ""){
+          alert("Veuillez entrer un article");
+        }else{
+          var li = document.createElement("li");
+          li.innerHTML = course.value;
+          liste.appendChild(li);
+          course.value = "";
+        }
+
+      });
+    </script>
+  </body>
+</html>

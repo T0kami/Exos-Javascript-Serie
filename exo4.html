@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      <input type="text" name="nombre" value="" placeholder="Nombre">
+
+      <input type="submit" name="submit" value="Valider">
+    </form>
+
+    <script type="text/javascript">
+
+      document.getElementsByName('submit')[0].addEventListener("click", (event) =>{
+        event.preventDefault();
+        var nombre = document.getElementsByName("nombre")[0].value;
+        alert("Si on divise "+nombre + " par 5, le reste est : "+(nombre%5));
+      });
+    </script>
+  </body>
+</html>

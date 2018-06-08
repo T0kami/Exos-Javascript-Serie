@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="nombre1" value="" placeholder="nombre 2">
+      <input type="text" name="nombre2" value="" placeholder="nombre 1">
+      <input type="submit" name="submit" value="Valider">
+    </form>
+
+    <script type="text/javascript">
+
+      document.getElementsByName('submit')[0].addEventListener("click", (event) =>{
+        event.preventDefault();
+        var nombre1 = document.getElementsByName("nombre1")[0].value;
+        var nombre2 = document.getElementsByName("nombre2")[0].value;
+
+        alert(nombre1*nombre2);
+      });
+    </script>
+  </body>
+</html>

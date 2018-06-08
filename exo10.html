@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      <input type="text" name="nombre" value="" placeholder="Nombre à deviner">
+
+      <input type="submit" name="submit" value="Valider">
+    </form>
+    <div id='answer'>
+
+    </div>
+
+    <script type="text/javascript">
+      const nombreMystere = Math.floor(Math.random() * 11);
+      document.getElementsByName('submit')[0].addEventListener("click", (event) =>{
+        event.preventDefault();
+          var nombre = document.getElementsByName("nombre")[0];
+          var result = document.getElementById("answer");
+          if (nombre.value < nombreMystere){
+            result.innerHTML = "Trop petit !";
+            nombre.value = "";
+          }else if (nombre.value > nombreMystere){
+            result.innerHTML = "Trop grand !";
+            nombre.value = "";
+          }else if (!parseInt(nombre.value)){
+            result.innerHTML = "Entrez un nombre !";
+            nombre.value = "";
+          }else result.innerHTML = "Bien joué";
+      });
+    </script>
+  </body>
+</html>

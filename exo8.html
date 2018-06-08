@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      <input type="text" name="nombre" value="" placeholder="Nombre">
+
+      <input type="submit" name="submit" value="Valider">
+    </form>
+
+    <script type="text/javascript">
+      document.getElementsByName('submit')[0].addEventListener("click", (event) =>{
+        event.preventDefault();
+        var nombre = document.getElementsByName("nombre")[0].value;
+        const nombres = ["zero","un","deux","trois","quatre","cinq"];
+
+        if (nombre < 0 || nombre > 5){
+          alert("Erreur d'intervalle");
+        }else{
+          alert(nombres[nombre]);
+        }
+      });
+    </script>
+  </body>
+</html>
